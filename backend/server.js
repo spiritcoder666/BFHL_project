@@ -6,7 +6,7 @@ app.use(express.json());
 
 // GET endpoint: returns a fixed operation code
 app.get('/bfhl', (req, res) => {
-  res.status(200).json({ operation_code: 1 });
+  res.status(200).send(JSON.stringify({operation_code: 1}));
 });
 
 // POST endpoint: processes JSON input per requirements
